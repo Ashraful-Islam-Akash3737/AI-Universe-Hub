@@ -7,14 +7,42 @@
     <title>AI Universe Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/10522c3609.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="container mx-auto">
 
+    <!-- header section -->
     <header class="text-center mt-5">
         <h1 class="text-5xl font-bold mb-5">AI Universe Hub</h1>
-        <button class="btn btn-active btn-primary bg-red-500 text-white border-none">Sort By Date</button>
+        <button class="btn btn-active btn-primary bg-red-500 text-white border-none mb-5">Sort By Date</button>
     </header>
+
+    
+    <!-- main section -->
+    <main>
+        <h2 class="lg:text-5xl md:text-3xl text-xl text-center font-medium py-8">Search Your Phone Here...</h2>
+        <!-- search section -->
+        <section class="bg-gray-300 p-4  rounded-t-md rounded-b-none flex">
+            <input id="search-field" type="text" placeholder="Search here..."
+                class="input w-full max-w-xs rounded-l-md rounded-r-none focus:outline-none" />
+            <button id="" onclick="" class="btn btn-active btn-accent rounded-r-md rounded-l-none text-white bg-red-500 focus:outline-none border-none">Search</button>
+
+
+            
+        </section>
+        <!-- display section -->
+        <section>
+            
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-black p-8 ">
+
+
+            </div>
+        </section>
+    </main>
+
+
+
 
     <script src="js/index.js"></script>
 </body>
