@@ -1,13 +1,29 @@
-const callData = async () => {
+const callData = async (searchTest,isShowMore) => {
     const res = await fetch('https://openapi.programming-hero.com/api/ai/tools')
     const data = await res.json()
     const info = data.data.tools;
     console.log(info);
-    displayData(info);
+    displayData(info,isShowMore);
 }
 
-const displayData = (info) => {
+
+const displayData = (info, isShowMore) => {
     const cardContainer = document.getElementById('card-container');
+
+    cardContainer.textContent = '';
+
+    const showMoreBtn = document.getElementById('show-more');
+    if(info.length > 6 || !isShowMore){
+        showMoreBtn.classList.remove('hidden');
+    }
+    else{
+        showMoreBtn.classList.add('hidden');
+    }
+
+    if(!isShowMore ){
+        info = info.slice(0, 6);
+    }
+    
 
     info.forEach(dataInfo => {
         console.log(dataInfo)
@@ -47,5 +63,19 @@ const displayData = (info) => {
 
 
 
+}
+
+const showMore = () => {
+   
+
+    searchAI(true);
+}
+
+
+const searchAI = (isShowMore) => {
+    const searchBtn = document.getElementById('sreach-btn');
+    const searchTest = searchBtn.value;
+
+    callData(searchTest,isShowMore);
 }
 callData();

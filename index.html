@@ -21,12 +21,12 @@
     
     <!-- main section -->
     <main>
-        <h2 class="lg:text-5xl md:text-3xl text-xl text-center font-medium py-8">Search Your Phone Here...</h2>
+        <h2 class="lg:text-5xl md:text-3xl text-xl text-center font-medium py-8">Search Your AI Here...</h2>
         <!-- search section -->
         <section class="bg-gray-300 p-4  rounded-t-md rounded-b-none flex">
             <input id="search-field" type="text" placeholder="Search here..."
                 class="input w-full max-w-xs rounded-l-md rounded-r-none focus:outline-none" />
-            <button id="" onclick="" class="btn btn-active btn-accent rounded-r-md rounded-l-none text-white bg-red-500 focus:outline-none border-none">Search</button>
+            <button id="sreach-btn" onclick="searchAI()" class="btn btn-active btn-accent rounded-r-md rounded-l-none text-white bg-red-500 focus:outline-none border-none">Search</button>
 
 
             
@@ -37,6 +37,11 @@
             <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-black p-8 ">
 
 
+            </div>
+
+            <!-- show more -->
+            <div class="flex justify-center">
+                <button id="show-more" onclick="showMore()" class="btn btn-active btn-accent rounded-md text-white bg-red-500 focus:outline-none border-none text-center m-5 hidden">Show More</button>
             </div>
         </section>
     </main>
